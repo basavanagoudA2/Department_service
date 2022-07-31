@@ -6,3 +6,7 @@ spring:
   cloud:
     config:
       enabled: false
+server:
+  servlet:
+    context-path: /internal
+  port: 9292
