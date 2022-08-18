@@ -4,10 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalTime;
-@Setter
 @Getter
+@Setter
 public class DepartmentIdNotFoundException extends RuntimeException{
-    String errorMessage;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	String errorMessage;
     LocalTime time;
 
     public DepartmentIdNotFoundException() {
@@ -36,4 +40,6 @@ public class DepartmentIdNotFoundException extends RuntimeException{
         super(message, cause, enableSuppression, writableStackTrace);
         this.errorMessage = errorMessage;
     }
+
+    
 }

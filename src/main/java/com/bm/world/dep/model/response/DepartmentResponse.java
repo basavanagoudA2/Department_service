@@ -6,4 +6,5 @@ import lombok.Data;
 public class DepartmentResponse {
     private String departmentName;
     private String departmentHead;
+
 }
