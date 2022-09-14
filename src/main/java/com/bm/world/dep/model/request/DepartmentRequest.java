@@ -1,9 +1,5 @@
 package com.bm.world.dep.model.request;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-
 public class DepartmentRequest {
     private  Integer departmentId;
 

@@ -10,5 +10,5 @@ public interface DepartmentService {
     public String deleteDepartment(Integer departmentId);
     public String updateDepartment(DepartmentRequest departmentRequest);
     public List<DepartmentResponse> getAllDepartment();
-    public DepartmentRequest getDepartmentOnId(Integer departmentId);
+    public DepartmentResponse getDepartmentOnId(Integer departmentId);
 }

@@ -11,7 +11,9 @@ sourceCompatibility = '1.8'
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
+		
 	}
+	
 }
 
 repositories {
@@ -35,9 +37,16 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'mysql:mysql-connector-java:8.0.30'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
+	implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')	
+		implementation 'org.springframework.boot:spring-boot-starter-log4j2:2.7.3'
+	
 }
+configurations {
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
 
 dependencyManagement {
 	imports {

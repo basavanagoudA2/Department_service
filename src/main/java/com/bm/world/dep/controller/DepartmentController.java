@@ -57,7 +57,11 @@ public class DepartmentController {
      * @return
      */
     @GetMapping(value =ApplicationConstants.GET_ALL_DEPT)
-    public List<DepartmentResponse> getAllDepartment(){
-        return departmentService.getAllDepartment();
+    public ResponseEntity< List<DepartmentResponse>> getAllDepartment(){
+        return new ResponseEntity<>(departmentService.getAllDepartment(),HttpStatus.OK);
     }
+    @GetMapping(value = ApplicationConstants.GET__DEPT_BY_ID)
+    public ResponseEntity<DepartmentResponse> getDepartmentById(@PathVariable Integer departmentId) {
+		return new ResponseEntity<>(departmentService.getDepartmentOnId(departmentId),HttpStatus.OK);
+	}
 }
